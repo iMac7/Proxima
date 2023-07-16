@@ -7,8 +7,12 @@
   transition: 200ms;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
   body {
-    padding-top: 5em;
+    padding-top: 4.5em;
   }
 }

@@ -17,7 +17,6 @@
 }
 
 .link {
-  /* outline: 1px solid gray; */
   text-decoration: none;
   display: inline-block;
   margin: 0.5em;
@@ -29,6 +28,7 @@
 
 .active {
   text-decoration: underline;
+  font-weight: 900;
 }
 
 .link:active {
@@ -46,12 +46,12 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     flex-direction: column;
-    /* height: 100vh;
-    width: 100vw; */
   }
 
   .ul {
     border: 2px solid black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     transform: translateY(50%) scaleX(1);
@@ -59,8 +59,6 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
-    /* height: 0; */
-    /* transform: scaleY(1); */
   }
 
   .closed {
@@ -81,9 +79,5 @@
     text-align: center;
     top: 10vh;
     left: 3.5rem;
-  }
-
-  .link {
-    /* display: none; */
   }
 }

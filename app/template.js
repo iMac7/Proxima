@@ -6,7 +6,7 @@ export default function MainTemplate({ children }) {
     <div>
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

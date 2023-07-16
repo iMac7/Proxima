@@ -36,6 +36,7 @@ export default function Navbar() {
         >
           Home
         </Link>
+
         <Link
           href={"/features"}
           className={`${styles.link} ${
@@ -44,14 +45,7 @@ export default function Navbar() {
         >
           Features
         </Link>
-        <Link
-          href={"/"}
-          className={`${styles.link} ${
-            checkPath("about") ? styles.active : ""
-          }`}
-        >
-          About
-        </Link>
+
         <Link
           href={"/contact"}
           className={`${styles.link} ${
@@ -60,8 +54,18 @@ export default function Navbar() {
         >
           Contact
         </Link>
+
         <Link
-          href={"/"}
+          href={"/about"}
+          className={`${styles.link} ${
+            checkPath("about") ? styles.active : ""
+          }`}
+        >
+          About
+        </Link>
+
+        <Link
+          href={"/waitlist"}
           className={`${styles.link} ${
             checkPath("waitlist") ? styles.active : ""
           }`}
