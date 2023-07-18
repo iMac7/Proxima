@@ -66,6 +66,30 @@
 }
 
 .faq {
+  /* border: 1px solid red; */
   width: max(300px, 80vw);
   max-width: 600px;
+  /* max-height: 1.5em; */
+  /* overflow: hidden; */
+}
+
+.faq .header {
+  background-color: rgb(242, 242, 242);
+  justify-content: space-between;
+  padding: 0.5em;
+}
+.faq .header:hover {
+  cursor: pointer;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  /* transition: 300ms; */
+}
+
+.active {
+  max-height: 100px;
+  /* display: block; */
+  /* height: 4rem; */
 }

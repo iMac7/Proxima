@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import styles from "../../public/css/features.module.css";
 import svg from "../../public/images/svg.js";
 
@@ -13,7 +15,7 @@ for (let i = 0; i < 7; i++) {
 
 const faqs = [];
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 3; i++) {
   faqs[i] = {
     question: "What is Proxima",
     answer:
@@ -22,13 +24,20 @@ for (let i = 0; i < 5; i++) {
 }
 
 export default function Features() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  function handleClick(index) {
+    if (index === activeIndex) setActiveIndex(null);
+    else setActiveIndex(index);
+  }
+
   return (
     <div className={styles.outer}>
       <h1>Features we offer</h1>
 
       <section className={styles.cards}>
-        {cardData.map((card) => (
-          <div className={styles.card}>
+        {cardData.map((card, index) => (
+          <div className={styles.card} key={index}>
             <div className={styles.header}>
               {card.svg}
               <h4>{card.title.toUpperCase()}</h4>
@@ -41,10 +50,19 @@ export default function Features() {
 
       <section className={styles.faqs}>
         <h2>Frequently Asked Questions</h2>
-        {faqs.map((faq) => (
-          <div className={styles.faq}>
-            <p>{faq.question}</p>
-            <p>{faq.answer}</p>
+        {faqs.map((faq, index) => (
+          <div className={styles.faq} key={index}>
+            <div className={styles.header} onClick={() => handleClick(index)}>
+              <p>{faq.question}</p>
+              <p>{index === activeIndex ? "-" : "+"}</p>
+            </div>
+            <p
+              className={`${styles.answer} ${
+                index === activeIndex ? styles.active : ""
+              }`}
+            >
+              {faq.answer}
+            </p>
           </div>
         ))}
       </section>
