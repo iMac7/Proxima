@@ -6,11 +6,14 @@ import styles from "../../public/css/navbar.module.css";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [path, setPath] = useState(window.location.pathname);
 
-  useEffect(() => {
-    setPath(window.location.pathname);
-  }, [window.location.pathname]);
+  const [path, setPath] = useState("");
+
+  if (typeof window !== "undefined") {
+    useEffect(() => {
+      setPath(window.location.pathname);
+    }, [window.location.pathname]);
+  }
 
   function checkPath(url) {
     if (path && path === "/" + url) return true;
