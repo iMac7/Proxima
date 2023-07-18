@@ -5,7 +5,7 @@ import svg from "../../public/images/svg.js";
 
 const cardData = [];
 
-for (let i = 0; i < 7; i++) {
+for (let i = 0; i < 3; i++) {
   cardData[i] = {
     svg: svg,
     title: "Reports",

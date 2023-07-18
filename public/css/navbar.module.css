@@ -1,17 +1,13 @@
 .nav {
-  border: 1px solid black;
   position: fixed;
   z-index: 1;
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   top: 0;
   display: flex;
   width: 100%;
   justify-content: flex-end;
   transition: 200ms;
-  box-shadow: 0px 6px 49px 7px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0px 6px 49px 7px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0px 6px 49px 7px rgba(0, 0, 0, 0.35);
 }
 
 .ul {
@@ -51,9 +47,8 @@
   .ul {
     border: 2px solid black;
     background-color: white;
-
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     position: absolute;
     top: 0;
     transform: translateY(50%) scaleX(1);
@@ -72,17 +67,21 @@
   }
 
   .closebtn {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: white;
-    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
     font-size: 3em;
     text-align: center;
-    top: 10vh;
-    left: 3.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .close {
+    transform: rotate(200deg);
   }
 }

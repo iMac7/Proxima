@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import Link from "next/link";
 import styles from "../public/css/home.module.css";
 
 export default function Home() {
@@ -59,11 +60,11 @@ export default function Home() {
         document.documentElement.clientHeight);
 
     for (const path of paths) {
-      path.style.strokeWidth = 10 * scrollPercentage;
+      path.style.strokeWidth = 5 * scrollPercentage;
       path.style.fill = `rgb(
-        ${255 * (1.2 - scrollPercentage)},
-        ${255 * (1.2 - scrollPercentage)},
-        ${255 * (1.2 - scrollPercentage)}
+        ${255 * (1.6 - scrollPercentage)},
+        ${255 * (1.6 - scrollPercentage)},
+        ${255 * (1.6 - scrollPercentage)}
        )`;
     }
   }
@@ -74,6 +75,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
+      <div className={styles.background}></div>
       {mysvg}
 
       <section className={`${styles.hero} ${styles.section}`}>
@@ -90,7 +92,7 @@ export default function Home() {
       <section className={`${styles.why} ${styles.section}`}>
         <h2>Why choose us</h2>
 
-        <p>Using powerful Virtual Assistants to grow your business</p>
+        <h3>Using powerful Virtual Assistants to grow your business</h3>
 
         <ul>
           <li>
@@ -106,13 +108,13 @@ export default function Home() {
       </section>
 
       <section className={`${styles.features} ${styles.section}`}>
-        <div className={styles.card}>
-          <h3>Reports</h3>
-          <p></p>
-          <button>Learn More &gt;</button>
-        </div>
-        <div className="card"></div>
-        <div className="card"></div>
+        <h2>FEATURES</h2>
+
+        <h3>Virtual interaction with a robust set of features</h3>
+
+        <Link href={"/features"}>
+          <button>Learn More &nbsp; &gt;</button>
+        </Link>
       </section>
     </div>
   );
