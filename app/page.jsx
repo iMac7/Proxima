@@ -14,9 +14,7 @@ export default function Home() {
     >
       <g
         transform="translate(0.000000,258.000000) scale(0.100000,-0.100000)"
-        // fill="#000000"
         stroke="none"
-        // strokeWidth="10px"
       >
         <path
           className="path"

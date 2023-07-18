@@ -10,6 +10,7 @@ export default function Footer() {
           <li>Careers</li>
           <li>Features</li>
           <li>Partners</li>
+          <li>FAQ</li>
         </ul>
       </div>
 

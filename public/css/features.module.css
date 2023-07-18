@@ -1,6 +1,10 @@
 .outer {
   /* border: 2px solid red; */
 }
+.outer h1 {
+  /* border: 1px solid red; */
+  padding: 1em;
+}
 
 .outer svg {
   width: 2em;
@@ -8,10 +12,9 @@
 }
 
 .outer section {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  padding: 2em 0;
   min-height: 20vh;
-  /* width: 100%; */
-  /* max-width: 100vw; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,11 +22,29 @@
   gap: 2em;
 }
 
+.outer button {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: none;
+  text-decoration: underline;
+  background-color: rgb(233, 233, 233);
+}
+
+.outer button:active {
+  background-color: rgb(62, 62, 62);
+  color: white;
+}
+
 .card {
-  border: 2px solid red;
+  border: 1px solid gray;
+  border-radius: 1em;
+  -webkit-box-shadow: 2px 2px 26px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 26px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 26px -10px rgba(0, 0, 0, 0.75);
   min-width: 300px;
   max-width: min(40%, 400px);
-  height: 30vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +54,18 @@
 
 .header {
   width: 100%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.faqs,
+.questions {
+  flex-direction: column;
+}
+
+.faq {
+  width: max(300px, 80vw);
+  max-width: 600px;
 }
