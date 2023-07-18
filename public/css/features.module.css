@@ -1,0 +1,39 @@
+.outer {
+  /* border: 2px solid red; */
+}
+
+.outer svg {
+  width: 2em;
+  height: 2em;
+}
+
+.outer section {
+  border: 1px solid blue;
+  min-height: 20vh;
+  /* width: 100%; */
+  /* max-width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.card {
+  border: 2px solid red;
+  min-width: 300px;
+  max-width: min(40%, 400px);
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.header {
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Draggable from "react-draggable";
 import styles from "../../public/css/navbar.module.css";
 
 export default function Navbar() {
@@ -74,9 +75,18 @@ export default function Navbar() {
         </Link>
       </ul>
 
-      <button className={styles.closebtn} onClick={handleClose}>
-        {open ? "X" : "+"}
-      </button>
+      <Draggable
+      // onClick={handleClose}
+      // cancel=".button"
+      >
+        <button
+          className={`${styles.closebtn} button`}
+          onClick={handleClose}
+          onTouchStart={handleClose}
+        >
+          {open ? "X" : "+"}
+        </button>
+      </Draggable>
     </nav>
   );
 }

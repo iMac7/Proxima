@@ -11,6 +11,10 @@ button:hover {
   cursor: pointer;
 }
 
+li {
+  list-style: none;
+}
+
 @media (min-width: 600px) {
   body {
     padding-top: 4.5em;
